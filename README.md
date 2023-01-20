@@ -1,1 +1,1 @@
-# Benchmark-of-Log-Parsing-Techniques
+# A Benchmark Study of Log Parsing Techniques
