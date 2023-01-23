@@ -1,0 +1,76 @@
+EventId,EventTemplate,,,,,,,,,
+E1,Alarm uploadStaticsToDB totalSteps=<*>:<*>:<*>:<*>,,,,,,,,,"dg,us"
+E2,"bulkSaveDetailHiHealthData() size = <*>,totalTime = <*>",,,,,,,,,
+E3,calculateAltitudeWithCache totalAltitude=<*>,,,,,,,,,
+E4,calculateCaloriesWithCache totalCalories=<*>,,,,,,,,,
+E5,"checkCurrentDay a new day comes , reset basicSyncCondition, currentDay is <*> oldDay is <*>",,,,,,,,,
+E6,"checkFirstSyncByType no such data in db ,type is <*> deviceCode is <*>",,,,,,,,,
+E7,checkInsertStatus stepStatSum or calorieStatSum is enough,,,,,,,,,c
+E8,checkInsertStatus stepSum or calorieSum is enough,,,,,,,,,c
+E9,clear(),,,,,,,,,c
+E10,closeNotification...,,,,,,,,,c
+E11,deleteHealthNotification(),,,,,,,,,c
+E12,flush sensor data,,,,,,,,,c
+E13,flush2DB result success,,,,,,,,,c
+E14,flushTempCacheToDB by stand,,,,,,,,,c
+E15,"getAppContext() isAppValid health or wear, packageName = <*>",,,,,,,,,us
+E16,getBinderPackageName packageName = com.huawei.health,,,,,,,,,c
+E17,getDiffTotalSteps= <*>##<*>,,,,,,,,,
+E18,getStepCounterStatus,,,,,,,,,c
+E19,getStepCounterStatus= true,,,,,,,,,bl
+E20,getTodayBasicStandardSteps= <*>##<*>##<*>,,,,,,,,,
+E21,getTodaySportData mStepsRecordManager=<*>,,,,,,,,,us
+E22,getTodayTotalDetailSteps = <*>##<*>##<*>##<*>##<*>##<*>,,,,,,,,,
+E23,ifCanSync not! no cloud version,,,,,,,,,c
+E24,initDataPrivacy the dataPrivacy is true,,,,,,,,,bl
+E25,"initDataPrivacy the dataPrivacy switch is open, start push health data!",,,,,,,,,c
+E26,initEnviroument,,,,,,,,,c
+E27,initUserPrivacy the userPrivacy is true,,,,,,,,,bl
+E28,"initUserPrivacy the userPrivacy switch is open, start push user data!",,,,,,,,,c
+E29,InsertCallBack() onSuccess  type = <*> data=true,,,,,,,,,bl
+E30,InsertEvent success begin:<*> end:<*>,,,,,,,,,
+E31,"insertHiHealthData() bulkSaveDetailHiHealthData fail errorCode = <*>,errorMessage = ERR_DATA_INSERT",,,,,,,,,
+E32,insertHiHealthData() checkAppType  <*> appID = <*>,,,,,,,,,
+E33,insertHiHealthData() end totalTime = <*>,,,,,,,,,
+E34,"insertHiHealthData() size = <*>,app = <*>,One Data Type = <*>,packageName = <*>,writeStatType = <*>",,,,,,,,,
+E35,isScreenOn true,,,,,,,,,bl
+E36,needAutoSync autoSyncSwitch is open,,,,,,,,,c
+E37,"new date =<*>, type=<*>,<*>.<*>,old=<*>.<*>",,,,,,,,,"dg,dv"
+E38,next day:<*>,,,,,,,,,
+E39,onExtend:<*> <*> <*> <*>,,,,,,,,,"dg,cv"
+E40,onReceive action: android.intent.action.SCREEN_OFF,,,,,,,,,c
+E41,onReceive action: android.intent.action.SCREEN_ON,,,,,,,,,c
+E42,onStandStepChanged <*>,,,,,,,,,
+E43,processHandleBroadcastAction action:android.intent.action.SCREEN_ON,,,,,,,,,c
+E44,processHandleBroadcastAction action:android.intent.action.TIME_TICK,,,,,,,,,c
+E45,registersensorsuccess: true,,,,,,,,,bl
+E46,reload : <*> restar <*>,,,,,,,,,
+E47,REPORT : <*> <*> <*> <*>,,,,,,,,,"dg,cv"
+E48,reStartStepCounter,,,,,,,,,c
+E49,"saveHealthDetailData() deviceID = <*>,clientID=<*>,id=<*>",,,,,,,,,
+E50,"saveHealthDetailData() saveOneDetailData fail hiHealthData = <*>,type = <*>",,,,,,,,,
+E51,"saveRealTimeHealthDatasStat() size = <*>,totalTime = <*>",,,,,,,,,
+E52,"saveStatData() type =<*>,time = <*>,statClient = <*>,who is <*>",,,,,,,,,
+E53,"screen status unknown,think screen on",,,,,,,,,c
+E54,sendSyncFailedBroadcast,,,,,,,,,c
+E55,setBasicStandardSteps basicStandardStep=<*> restartSteps=<*>,,,,,,,,,
+E56,setDiffTotalSteps=<*>,,,,,,,,,
+E57,setGoalNotifiShownRecord <*> false,,,,,,,,,bl
+E58,setTodayTotalDetailSteps=<*>,,,,,,,,,"dg,cv"
+E59,setWriteDBLastDataMinute success,,,,,,,,,c
+E60,setWriteDBLastDataMinute=<*>,,,,,,,,,
+E61,"startInsertSportSync first <*> steps sync,do all sync",,,,,,,,,
+E62,"startInsertSportSync start auto sync,app is <*>",,,,,,,,,
+E63,startListenerChange subscribeList = [<*>],,,,,,,,,
+E64,"startSync hiSyncOption = HiSyncOption{syncAction=<*>, syncMethod=<*>, syncScope=<*>, syncDataType=<*>, syncModel=<*>, pushAction=<*>},app = <*> who = <*>",,,,,,,,,
+E65,startTimer start autoSync,,,,,,,,,c
+E66,stepSyncOrNot appSynTimes is <*>,,,,,,,,,
+E67,"stepSyncOrNot appSynTimes is <*>, statsyncTimes is <*>",,,,,,,,,
+E68,theDayChanged <*>,,,,,,,,,
+E69,"timeStamp back,extendReportTimeStamp=<*>",,,,,,,,,
+E70,tryToRecordAsBasicStepData bWrite true,,,,,,,,,bl
+E71,tryToReloadTodayBasicSteps<*>|<*>|<*>|<*>,,,,,,,,,
+E72,"upLoadOneMinuteDataToEngine time=<*>,<*>,<*>,<*>,<*>",,,,,,,,,
+E73,uploadStaticsToDB failed message=true,,,,,,,,,bl
+E74,uploadStaticsToDB() onResult  type = <*> obj=true,,,,,,,,,bl
+E75,writeDataToDB size <*>,,,,,,,,,
