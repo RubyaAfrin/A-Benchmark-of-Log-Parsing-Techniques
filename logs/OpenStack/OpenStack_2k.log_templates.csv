@@ -1,0 +1,44 @@
+EventId,EventTemplate,,,,,,,,,
+E1,"[instance: <*>] Attempting claim: memory <*> MB, disk <*> GB, vcpus <*> CPU",,,,,,,,,
+E2,[instance: <*>] Claim successful,,,,,,,,,
+E3,[instance: <*>] Creating image,,,,,,,,,
+E4,[instance: <*>] Deleting instance files <*>,,,,,,,,,"dg,dr"
+E5,[instance: <*>] Deletion of <*> complete,,,,,,,,,"dg,dr"
+E6,"[instance: <*>] disk limit not specified, defaulting to unlimited",,,,,,,,,
+E7,[instance: <*>] During sync_power_state the instance has a pending task (spawning). Skip.,,,,,,,,,
+E8,[instance: <*>] Instance destroyed successfully.,,,,,,,,,
+E9,[instance: <*>] Instance spawned successfully.,,,,,,,,,
+E10,"[instance: <*>] memory limit: <*>.<*> MB, free: <*>.<*> MB",,,,,,,,,"dg,dv"
+E11,[instance: <*>] Terminating instance,,,,,,,,,
+E12,[instance: <*>] Took <*>.<*> seconds to build instance.,,,,,,,,,"dg,dv"
+E13,[instance: <*>] Took <*>.<*> seconds to deallocate network for instance.,,,,,,,,,"dg,dv"
+E14,[instance: <*>] Took <*>.<*> seconds to destroy the instance on the hypervisor.,,,,,,,,,"dg,dv"
+E15,[instance: <*>] Took <*>.<*> seconds to spawn the instance on the hypervisor.,,,,,,,,,"dg,dv"
+E16,"[instance: <*>] Total disk: <*> GB, used: <*>.<*> GB",,,,,,,,,"dg,dv"
+E17,"[instance: <*>] Total memory: <*> MB, used: <*>.<*> MB",,,,,,,,,"dg,dv"
+E18,"[instance: <*>] Total vcpu: <*> VCPU, used: <*>.<*> VCPU",,,,,,,,,"dg,dv"
+E19,"[instance: <*>] vcpu limit not specified, defaulting to unlimited",,,,,,,,,
+E20,[instance: <*>] VM Paused (Lifecycle Event),,,,,,,,,
+E21,[instance: <*>] VM Resumed (Lifecycle Event),,,,,,,,,
+E22,[instance: <*>] VM Started (Lifecycle Event),,,,,,,,,
+E23,[instance: <*>] VM Stopped (Lifecycle Event),,,,,,,,,
+E24,"<*> ""DELETE <*>"" status: <*> len: <*> time: <*>.<*>",,,,,,,,,"dg,dv,dr"
+E25,"<*> ""GET <*>"" status: <*> len: <*> time: <*>.<*>",,,,,,,,,"dg,dv,dr"
+E26,"<*> ""POST <*>"" status: <*> len: <*> time: <*>.<*>",,,,,,,,,"dg,dv,dr"
+E27,Active base files: <*>,,,,,,,,,dr
+E28,Auditing locally available compute resources for node <*>,,,,,,,,,dr
+E29,Base or swap file too young to remove: <*>,,,,,,,,,dr
+E30,Compute_service record updated for <*>,,,,,,,,,dr
+E31,Creating event network-vif-plugged:<*>-<*>-<*>-<*>-<*> for instance <*>,,,,,,,,,"dg,cv"
+E32,Final resource view: name=<*> phys_ram=<*> used_ram=<*> phys_disk=<*> used_disk=<*> total_vcpus=<*> used_vcpus=<*> pci_stats=[],,,,,,,,,"dg,us"
+E33,HTTP exception thrown: No instances found for any event,,,,,,,,,c
+E34,image <*> at (<*>): checking,,,,,,,,,"dg,dr"
+E35,"image <*> at (<*>): in use: on this node <*> local, <*> on other nodes sharing this instance storage",,,,,,,,,"dg,dr"
+E36,Removable base files: <*>,,,,,,,,,dr
+E37,Removing base or swap file: <*>,,,,,,,,,dr
+E38,Running instance usage audit for host <*> from <*>-<*>-<*> <*>:<*>:<*> to <*>-<*>-<*> <*>:<*>:<*>. <*> instances.,,,,,,,,,"dg,cv"
+E39,Successfully synced instances from host '<*>'.,,,,,,,,,dr
+E40,The instance sync for host '<*>' did not match. Re-created its InstanceList.,,,,,,,,,dr
+E41,"Total usable vcpus: <*>, total allocated vcpus: <*>",,,,,,,,,
+E42,Unknown base file: <*>,,,,,,,,,dr
+E43,"While synchronizing instance power states, found <*> instances in the database and <*> instances on the hypervisor.",,,,,,,,,
