@@ -31,9 +31,43 @@ def evaluate(groundtruth, parsedresult):
     non_empty_log_ids = df_groundtruth[~df_groundtruth['EventId'].isnull()].index
     df_groundtruth = df_groundtruth.loc[non_empty_log_ids]
     df_parsedlog = df_parsedlog.loc[non_empty_log_ids]
+    
+    
+    df_groundtruth_et= df_groundtruth['EventTemplate']
+    df_groundtruth_list=df_groundtruth_et.values.tolist()
+    df_groundtruth_list = list(map(str.split, df_groundtruth_list))
+
+    df_parsedlog_et = df_parsedlog['EventTemplate']
+    df_parsedlog_list = df_parsedlog_et.values.tolist()
+    df_parsedlog_list = list(map(str.split, df_parsedlog_list))
+
+    a = df_parsedlog_list
+    b = df_groundtruth_list
+    edit_dist=0
+    # calculate Levenshtein distance between two arrays
+    for c in range(0,len(df_groundtruth_et)):
+        a= df_groundtruth_list[c]
+        b = df_parsedlog_list[c]
+        for i, k in zip(a, b):
+            edit_dist+=(lev(i,k))
+
+    edit_dist=float(edit_dist)/2000
+    total_log_token=0
+    acc_pa=0.0
+     # calculate parsing accuracy between two arrays
+    for i in range(0,len(df_groundtruth_et)):
+        length_list=len(df_groundtruth_list[i])
+        a = df_groundtruth_list[i]
+        b = df_parsedlog_list[i]
+        if (a==b):
+            correct_log += 1
+
+    acc_pa = float (correct_log)/len(df_groundtruth_et)
+
+    
     (precision, recall, f_measure, accuracy) = get_accuracy(df_groundtruth['EventId'], df_parsedlog['EventId'])
     print('Precision: %.4f, Recall: %.4f, F1_measure: %.4f, Parsing_Accuracy: %.4f'%(precision, recall, f_measure, accuracy))
-    return f_measure, accuracy
+    return accuracy,  acc_pa, edit_dist
 
 def get_accuracy(series_groundtruth, series_parsedlog, debug=False):
     """ Compute accuracy metrics between log parsing results and ground truth
