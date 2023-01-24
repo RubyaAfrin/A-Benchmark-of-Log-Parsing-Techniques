@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 import sys
 sys.path.append('../')
-print ("hello")
 from logparser import Drain,evaluator
 import os
 import pandas as pd
