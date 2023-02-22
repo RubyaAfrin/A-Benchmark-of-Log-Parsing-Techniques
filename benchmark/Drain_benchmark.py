@@ -148,12 +148,12 @@ for dataset, setting in benchmark_settings.iteritems():
     parser = Drain.LogParser(log_format=setting['log_format'], indir=indir, outdir=output_dir, rex=setting['regex'], depth=setting['depth'], st=setting['st'])
     parser.parse(log_file)
     
-    accuracy, parsing_accuracy, edit_distance   = evaluator.evaluate(
+    group_accuracy, parsing_accuracy, edit_distance   = evaluator.evaluate(
                            groundtruth=os.path.join(indir, log_file + '_structured.csv'),
                            parsedresult=os.path.join(output_dir, log_file + '_structured.csv')
                            )
     
-    bechmark_result.append([dataset, accuracy, parsing_accuracy, edit_distance])
+    bechmark_result.append([dataset, group_accuracy, parsing_accuracy, edit_distance])
 
 
 print('\n=== Overall evaluation results ===')
