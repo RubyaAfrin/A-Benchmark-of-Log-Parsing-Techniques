@@ -1,8 +1,4 @@
-"""
-Description : This file implements the function to evaluation accuracy of log parsing
-Author      : LogPAI team
-License     : MIT
-"""
+
 
 import sys
 import pandas as pd
@@ -49,11 +45,12 @@ def evaluate(groundtruth, parsedresult):
         a= df_groundtruth_list[c]
         b = df_parsedlog_list[c]
         for i, k in zip(a, b):
-            edit_dist+=(lev(i,k))
+            edit_dist+=(lev_dist(i,k))
 
-    edit_dist=float(edit_dist)/2000
+    edit_dist=float(edit_dist)/len(df_groundtruth_et)
     total_log_token=0
     acc_pa=0.0
+    correct_log=0
      # calculate parsing accuracy between two arrays
     for i in range(0,len(df_groundtruth_et)):
         length_list=len(df_groundtruth_list[i])
@@ -124,6 +121,41 @@ def get_accuracy(series_groundtruth, series_parsedlog, debug=False):
     accuracy = float(accurate_events) / series_groundtruth.size
     return precision, recall, f_measure, accuracy
 
+def lev_dist(a, b):
+        '''
+        This function will calculate the levenshtein distance between ground truth and generated output
+        strings a and b
+
+        params:
+            a (String) : The first string you want to compare
+            b (String) : The second string you want to compare
+
+        returns:
+            This function will return the distnace between string a and b.
+
+        example:
+            a = 'stamp'
+            b = 'stomp'
+            lev_dist(a,b)
+            >> 1.0
+        '''
+
+        def min_dist(s1, s2):
+
+            if s1 == len(a) or s2 == len(b):
+                return len(a) - s1 + len(b) - s2
+
+            # no change required
+            if a[s1] == b[s2]:
+                return min_dist(s1 + 1, s2 + 1)
+
+            return 1 + min(
+                min_dist(s1, s2 + 1),  # insert character
+                min_dist(s1 + 1, s2),  # delete character
+                min_dist(s1 + 1, s2 + 1),  # replace character
+            )
+
+        return min_dist(0, 0)
 
 
 
