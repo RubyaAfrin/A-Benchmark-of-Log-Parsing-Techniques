@@ -157,7 +157,7 @@ for dataset, setting in benchmark_settings.iteritems():
 
 
 print('\n=== Overall evaluation results ===')
-df_result = pd.DataFrame(bechmark_result, columns=['Dataset','Group Accuracy' 'Parsing Accuracy', 'Edit Distance'])
+df_result = pd.DataFrame(bechmark_result, columns=['Dataset','Group Accuracy', 'Parsing Accuracy', 'Edit Distance'])
 df_result.set_index('Dataset', inplace=True)
 print(df_result)
 df_result.T.to_csv('Drain_bechmark_result.csv')
